@@ -8,11 +8,7 @@ function App() {
   const [description, setDescription] = useState('');
   const [toDos, setToDos] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState('Não iniciado');
-
-  const handleChangeStatus = (newStatus) => {
-    setStatus(newStatus)
-  }
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -53,36 +49,7 @@ function App() {
             />
           </div>
 
-          <div className="statusDot">
-            <p>Status: {status}</p>
-            <label>
-              <input 
-                type="radio"
-                value="Não iniciado"
-                checked={status === 'Não iniciado'}
-                onChange={(e) => handleChangeStatus(e.target.value)}
-              />
-              Não Iniciado
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="Em andamento"
-                checked={status === 'Em andamento'}
-                onChange={(e) => handleChangeStatus(e.target.value)}
-              />
-              Em Andamento
-            </label>
-            <label>
-              <input
-                type="radio"
-                value="Concluído"
-                checked={status === 'Concluído'}
-                onChange={(e) => handleChangeStatus(e.target.value)}
-              />
-              Concluído
-            </label>
-          </div>
+          
 
           <input type='submit' value='Criar Tarefa' />
         </form>

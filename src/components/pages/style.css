@@ -24,9 +24,14 @@
     border-bottom: 1px solid #2c3035;
 }
   
-.formToDo h2, .listToDo{
+.formToDo h2{
     text-align: center;
     margin-top: 0;
+}
+
+.listToDo{
+    text-align: center;
+    padding-bottom: 20px;
 }
   
 .formControl{
@@ -49,9 +54,9 @@
     color: #dfdfdf;
 }
   
-.statusDot label{
-    padding: 10px;
-    margin-bottom: 10px;
+label {
+    display: flex;
+    padding-bottom: 10px;
 }
 
 button {
@@ -64,6 +69,23 @@ button {
     cursor: pointer;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+.linkButton {   
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.buttonBack{
+    background-color: #333;
+    color: #eee;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
 }
 
 button:hover{
@@ -80,9 +102,28 @@ input[type='submit'] {
     padding: 1rem;
     cursor: pointer;
     margin-top: 10px;
- }
+}
   
-  input[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: #666;
-  }
+}
+
+table {
+    width: 40%;
+    margin: 2rem auto;
+    background-color: #232425;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 8px 8px 10px #0000008c;
+    border-collapse: collapse;
+}
+
+th, tr, td {
+    padding: 25px;
+    border: 1px solid black;
+}
+
+
+
+
   
