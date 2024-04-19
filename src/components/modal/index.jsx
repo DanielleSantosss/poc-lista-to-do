@@ -5,8 +5,8 @@ import { MdClose } from 'react-icons/md';
 
 const Modal = ({ isOpen, children, setModalOpen }) => {
   const closeModal = (e) => {
-    e.preventDefault();
-    setModalOpen(false);
+      e.preventDefault();
+      setModalOpen(false);
   };
 
   return (
