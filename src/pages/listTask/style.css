@@ -1,0 +1,62 @@
+label {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+input[type='submit'] {
+    background-color: #333;
+    color: #eee;
+    display: block;
+    width: 100%;
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+  
+input[type="submit"]:hover {
+    background-color: #666;
+}
+
+table {
+    width: 50%;
+    margin: 2rem auto;
+    background-color: #232425;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 8px 8px 10px #0000008c;
+    border-collapse: collapse;
+}
+
+th, tr, td {
+    padding: 25px;
+    border: 1px solid black;
+}
+
+.containerPaginate {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    font-weight: bolder;
+    margin-right: 3.6%;
+   
+}
+
+
+.wrapperButton {
+    width: 50%;
+}
+.wrapperButtonMaster {
+    display: flex;
+    justify-content: center;
+}
+.itemsPaginate {
+    cursor:pointer
+}
+
+
+
+
+  
