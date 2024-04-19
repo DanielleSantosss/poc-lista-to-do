@@ -1,0 +1,44 @@
+services:
+    lista-to-do:
+        container_name: lista-to-do
+        build: .
+        ports:
+            - 7000:7000
+        restart: always
+        command: ["sh", "-c", "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=7000 "]
+        volumes:
+            - .:/app/lista-to-do
+            - vendor-lista-to-do:/app/lista-to-do/vendor
+        depends_on:
+            - mysql
+        networks:
+           - master-network
+
+    mysql:
+        image: mysql:5.7
+        container_name: mysql
+        ports:
+            - "3305:3306"
+        expose:
+            - '3305'
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: lista-to-do
+        volumes:
+            - 'mysql-volumes:/.mysql-data/db:/var/lib/mysql'
+
+        networks:
+           - master-network
+
+
+volumes:
+  vendor-lista-to-do:
+   name: vendor-lista-to-do
+  mysql-volumes:
+   name: mysql-volumes
+
+networks:
+    master-network:
+     name: master-network
+     driver: bridge
