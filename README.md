@@ -21,11 +21,15 @@ Acesse e utilize o seguinte comando:
 
 docker-compose up.
 
+Renomeie o arquivo .env.example para .env
+
 Após isto o backend irá ser iniciado.
 
 ### 3. Entrar na pasta do front(frontend)
 
 Instale as dependências com o comando npm install.
+
+Renomeie o arquivo .env.example para .env
 
 ### 4. Simule a aplicação localhost
 
